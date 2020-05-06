@@ -17,7 +17,7 @@ void loop()
     if (tfmini.available())
     {
         float distance, strength, integrationTime, timestamp;
-        timestamp = millis();
+        timestamp = millis()/1000.0;
         distance = tfmini.getDistance();
         strength = tfmini.getStrength();
         integrationTime = tfmini.getIntegrationTime();
