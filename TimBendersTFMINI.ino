@@ -1,14 +1,13 @@
 #include <phyphoxBle.h>
 #include "TFmini.h"
 
-//TFmini tfmini;
+TFmini tfmini;
 BleServer server("TFMini");
 void setup()
 {
     server.start();
-    Serial.begin(115200);
-    //Serial1.begin(TFmini::DEFAULT_BAUDRATE);
-    //tfmini.attach(Serial1);
+    Serial1.begin(TFmini::DEFAULT_BAUDRATE);
+    tfmini.attach(Serial1);
     delay(2000);
 }
 
