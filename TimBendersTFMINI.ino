@@ -2,11 +2,13 @@
 #include "TFmini.h"
 
 TFmini tfmini;
-BleServer server("TFMini");
+BleServer server("Arduino");
 void setup()
 {
     server.start();
     Serial1.begin(TFmini::DEFAULT_BAUDRATE);
+    tfmini.setDetectionPattern(TFmini::DetectionPattern::Fixed);
+    tfmini.setDistanceMode(TFmini::DistanceMode::Long);
     tfmini.attach(Serial1);
     delay(2000);
 }
