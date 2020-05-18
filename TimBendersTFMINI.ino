@@ -7,9 +7,9 @@ void setup()
 {
     server.start();
     Serial1.begin(TFmini::DEFAULT_BAUDRATE);
+    tfmini.attach(Serial1);
     tfmini.setDetectionPattern(TFmini::DetectionPattern::Fixed);
     tfmini.setDistanceMode(TFmini::DistanceMode::Long);
-    tfmini.attach(Serial1);
     delay(2000);
 }
 
