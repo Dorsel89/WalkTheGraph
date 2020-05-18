@@ -8,9 +8,14 @@ void setup()
     server.start();
     Serial1.begin(TFmini::DEFAULT_BAUDRATE);
     tfmini.attach(Serial1);
+    delay(1000);
+
     const TFmini::DetectionPattern myPattern = TFmini::DetectionPattern::Fixed;
     tfmini.setDetectionPattern(myPattern);
+    delay(1000);
+
     const TFmini::DistanceMode myMode = TFmini::DistanceMode::Long;
+
     tfmini.setDistanceMode(myMode);
     delay(2000);
 }
