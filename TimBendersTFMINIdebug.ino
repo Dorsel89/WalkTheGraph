@@ -18,8 +18,7 @@ void setup()
 
 void loop()
 {
-    if (tfmini.available())
-    {
+
         float distance, strength, integrationTime, timestamp;
         timestamp = millis()/1000.0;
         distance = dist = tfmini.getDistance();
@@ -28,5 +27,4 @@ void loop()
         Serial.println(distance);
         delay(30);
         server.write(distance,strength,timestamp, integrationTime);
-    }
 }
