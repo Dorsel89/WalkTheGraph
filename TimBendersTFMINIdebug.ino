@@ -21,7 +21,7 @@ void loop()
 
         float distance, strength, integrationTime, timestamp;
         timestamp = millis()/1000.0;
-        distance = dist = tfmini.getDistance();
+        distance = tfmini.getDistance();
         strength = tfmini.getRecentSignalStrength();
         integrationTime = 1.;//tfmini.getIntegrationTime();
         Serial.println(distance);
