@@ -12,7 +12,9 @@ void setup()
     server.start();
     tfmini.begin(&Serial1);    
     delay(1000);
-    tfmini.setMeasurementMode(TFMini::MODE::LONG);
+    TFMini::MODE myMode =  TFMini::MODE::LONG;
+
+    tfmini.setMeasurementMode(myMode);
 
 }
 
