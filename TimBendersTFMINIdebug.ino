@@ -10,9 +10,9 @@ void setup()
     Serial1.begin(115200);
     delay(2000);
     server.start();
-    Serial1.begin(TFmini::DEFAULT_BAUDRATE);
     tfmini.begin(&Serial1);    
     delay(1000);
+    tfmini.setMeasurementMode(TFMini::MODE::LONG);
 
 }
 
