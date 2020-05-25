@@ -6,6 +6,7 @@ BleServer server("Arduino");
 void setup()
 {
     Serial.begin(115200);
+    delay(2000);
     server.start();
     Serial1.begin(TFmini::DEFAULT_BAUDRATE);
     tfmini.attach(Serial1);
