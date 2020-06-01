@@ -15,6 +15,7 @@ void setup()
     TFMini::MODE myMode =  TFMini::MODE::LONG;
 
     tfmini.setMeasurementMode(myMode);
+    tfmini.setOutputCycle(20); // set time for one measurement cycle in multiple of 10ms (20ms/50Hz in this case)
 
 }
 
