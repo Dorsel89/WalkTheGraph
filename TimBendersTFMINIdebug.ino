@@ -28,6 +28,6 @@ void loop()
         strength = tfmini.getRecentSignalStrength();
         integrationTime = 1.;//tfmini.getIntegrationTime();
         Serial.println(distance);
-        delay(30);
+        //delay(30);
         server.write(distance,strength,timestamp, integrationTime);
 }
