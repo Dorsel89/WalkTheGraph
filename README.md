@@ -1,8 +1,9 @@
 # WalkTheGraph
 
-This sketch is using the following library:
+This sketch is using the following librarys:
 https://github.com/Dorsel89/tfmini
 
+https://github.com/Staacks/phyphox-arduino
 
 Used harware components:
 
