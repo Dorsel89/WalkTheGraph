@@ -2,14 +2,13 @@
 #include "TFMini.h"
 
 TFMini tfmini;
-BleServer server("Arduino");
 void setup()
 {
     Serial.begin(115200);
     delay(2000);
     Serial1.begin(115200);
     delay(2000);
-    server.start();
+    PhyphoxBLE::start("Arduino");
     tfmini.begin(&Serial1);    
     delay(1000);
     MODE myMode =  MODE::LONG;
@@ -29,5 +28,5 @@ void loop()
         integrationTime = 1.;//tfmini.getIntegrationTime();
         Serial.println(distance);
         //delay(30);
-        server.write(distance,strength,timestamp, integrationTime);
+        PhyphoxBLE::write(distance,strength,timestamp, integrationTime);
 }
